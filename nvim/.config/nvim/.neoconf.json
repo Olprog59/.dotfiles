@@ -1,0 +1,26 @@
+{
+  "neodev": {
+    "library": {
+      "enabled": true,
+      "plugins": true
+    }
+  },
+  "neoconf": {
+    "plugins": {
+      "lua_ls": {
+        "enabled": true
+      }
+    }
+  },
+  "lspconfig": {
+    "jdtls": {
+      "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-22",
+          "path": "/Users/olprog/.sdkman/candidates/java/current/",
+          "default": true
+        }
+      ]
+    }
+  }
+}

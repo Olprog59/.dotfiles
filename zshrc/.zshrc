@@ -121,30 +121,6 @@ export HDF5_DIR=/opt/homebrew/
 
 export PATH="$PATH:$HOME/go/bin"
 
-export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
-
-# source "$HOME/.cargo/env"
-
-export IDF_PATH="$HOME/esp/esp-idf"
-export PATH="$IDF_PATH/tools:$PATH"
-alias get_idf='. $HOME/esp/esp-idf/export.sh'
-
-export ESP_MATTER_PATH="$HOME/esp/esp-matter"
-export PATH="$PATH:$ESP_MATTER_PATH/connectedhomeip/connectedhomeip/out/host"
-export PATH="$PATH:$HOME/gn"
-export ZAP_INSTALL_PATH="$HOME/esp/zap"
-export PATH="$PATH:$ZAP_INSTALL_PATH"
-
-export IDF_CCACHE_ENABLE=1
-
-function idf() {
-    $HOME/.espressif/python_env/idf5.2_py3.11_env/bin/python ~/esp/esp-idf/tools/idf.py "$@"
-}
-
-alias get_esprs='. $HOME/export-esp.sh'
-#export LIBCLANG_PATH="$HOME/.espressif/tools/esp-clang/16.0.1-fe4f10a809/esp-clang/bin"
-export LIBCLANG_PATH="$HOME/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-16.0.0-20230516/esp-clang/lib/"
-export PATH="/Users/olprog/.espressif/tools/xtensa-esp32-elf-gcc/12.2.0_20230208-aarch64-apple-darwin/bin/:/Users/olprog/.espressif/tools/xtensa-esp32s2-elf-gcc/12.2.0_20230208-aarch64-apple-darwin/bin/:/Users/olprog/.espressif/tools/xtensa-esp32s3-elf-gcc/12.2.0_20230208-aarch64-apple-darwin/bin/:$PATH"
 
 
 export NVM_DIR="$HOME/.nvm"

@@ -25,8 +25,13 @@ brew install lazydocker \
     bruno
 ```
 
-> Starship
+> [Starship](https://starship.rs/)
 > ```bash
 > curl -sS https://starship.rs/install.sh | sh
 > ```
 
+> [Atac](https://github.com/Julien-cpsn/ATAC?tab=readme-ov-file#install-with-homebrew)
+> ```bash
+> brew tap julien-cpsn/atac
+> brew install atac
+> ```

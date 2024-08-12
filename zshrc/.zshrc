@@ -206,8 +206,6 @@ export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
 # For pkg-config to find mysql-client you may need to set:
 export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 autoload -U compinit; compinit
 
 export ATAC_KEY_BINDINGS="$HOME/.config/atac/key_bindings.toml"
@@ -223,3 +221,8 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
+
+if command -v rbenv > /dev/null; then
+  eval "$(rbenv init -)"
+fi
+

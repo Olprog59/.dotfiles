@@ -226,3 +226,4 @@ if command -v rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
 
+export ATAC_MAIN_DIR="$HOME/develop/atac"

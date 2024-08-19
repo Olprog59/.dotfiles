@@ -4,9 +4,7 @@ return {
   cmd = "Silicon",
   init = function()
     local wk = require("which-key")
-    wk.register({
-      ["<leader>sc"] = { ":Silicon<CR>", "Snapshot code" },
-    }, { mode = "v" })
+    wk.add({ { "<leader>sc", ":Silicon<CR>", desc = "Snapshot code", mode = "v" } })
   end,
   config = function()
     require("silicon").setup({

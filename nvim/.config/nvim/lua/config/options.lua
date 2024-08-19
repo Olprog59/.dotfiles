@@ -9,7 +9,7 @@ vim.o.modifiable = true
 
 -- Appearance
 opt.termguicolors = true
-opt.background = "dark"
+-- opt.background = "dark"
 opt.signcolumn = "yes"
 vim.diagnostic.config({
   float = { border = "rounded" }, -- add border to diagnostic popups

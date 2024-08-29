@@ -120,3 +120,5 @@ sdk install maven
 sdk install springboot
 sdk install java 22.0.2-graal
 ```
+
+### Split Screen with [Magnet](https://apps.apple.com/us/app/magnet/id441258766)

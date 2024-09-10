@@ -122,3 +122,17 @@ sdk install java 22.0.2-graal
 ```
 
 ### Split Screen with [Magnet](https://apps.apple.com/us/app/magnet/id441258766)
+
+### [Obrstack](https://orbstack.dev/)
+
+```bash
+brew install orbstack
+```
+
+### [Tart](https://tart.run/)
+
+```bash
+brew install cirruslabs/cli/tart
+tart clone ghcr.io/cirruslabs/macos-sonoma-base:latest sonoma-base
+tart run sonoma-base
+```

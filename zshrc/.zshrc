@@ -208,7 +208,6 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
 
 autoload -U compinit; compinit
 
-export ATAC_KEY_BINDINGS="$HOME/.config/atac/key_bindings.toml"
 
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
@@ -226,4 +225,6 @@ if command -v rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
 
+export ATAC_KEY_BINDINGS="$HOME/.config/atac/key_bindings.toml"
+export ATAC_THEME="$HOME/.config/atac/theme.toml"
 export ATAC_MAIN_DIR="$HOME/develop/atac"

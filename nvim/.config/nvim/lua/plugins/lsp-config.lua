@@ -2,14 +2,10 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      -- Enable this to enable the builtin LSP inlay hints on Neovim >= 0.10.0
-      -- Be aware that you also will need to properly configure your LSP server to
-      -- provide the inlay hints.
       inlay_hints = {
         enabled = true,
-        exclude = { "vue" }, -- filetypes for which you don't want to enable inlay hints
+        exclude = { "vue" },
       },
-      -- make sure mason installs the server
       servers = {
         jdtls = {},
         tailwindcss = {},
@@ -36,11 +32,16 @@ return {
             intelephense = {
               filetypes = { "php", "blade" },
               files = {
-                associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
+                associations = { "*.php", "*.blade.php" },
                 maxSize = 5000000,
               },
             },
           },
+        },
+        tsserver = {
+          on_attach = function(client, bufnr)
+            client.stop() -- Arrête tsserver
+          end,
         },
         vtsls = {
           settings = {
@@ -63,7 +64,10 @@ return {
       },
       setup = {
         jdtls = function()
-          return true -- avoid duplicate servers
+          return true
+        end,
+        tsserver = function()
+          return false -- Désactiver tsserver pour éviter le conflit
         end,
       },
     },

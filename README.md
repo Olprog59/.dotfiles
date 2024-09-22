@@ -61,6 +61,21 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 - Find the line which says plugins=(git).
 - Replace that line with `plugins=(git zsh-autosuggestions zsh-syntax-highlighting)`
 
+### [NeoVim](https://neovim.io/)
+
+#### For `live-server` on `neovim`
+
+```bash
+npm install -g live-server
+```
+
+#### For `Markdown Preview` on `neovim`
+
+```bash
+cd ~/.local/share/nvim/lazy/markdown-preview.nvim
+npm install
+```
+
 ### [Starship](https://starship.rs/guide/)
 
 ```bash

@@ -1,5 +1,13 @@
 return {
   {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        tailwindcss = {},
+      },
+    },
+  },
+  {
     "NvChad/nvim-colorizer.lua",
     opts = {
       user_default_options = {
@@ -14,7 +22,7 @@ return {
     },
     opts = function(_, opts)
       -- original LazyVim kind icon formatter
-      local format_kinds = optilws.formatting.format
+      local format_kinds = opts.formatting.format
       opts.formatting.format = function(entry, item)
         format_kinds(entry, item) -- add icons
         return require("tailwindcss-colorizer-cmp").formatter(entry, item)

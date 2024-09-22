@@ -2,11 +2,10 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      inlay_hints = {
-        enabled = true,
-        exclude = { "vue" },
-      },
+      inlay_hints = { enabled = true },
+      diagnostics = { virtual_text = false },
       servers = {
+        -- Configuration pour les autres serveurs
         jdtls = {},
         tailwindcss = {},
         emmet_language_server = {
@@ -38,36 +37,38 @@ return {
             },
           },
         },
+        -- Configuration de Volar pour Vue et TypeScript
+        volar = {
+          filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+        },
+        -- Configuration de tsserver
         tsserver = {
-          on_attach = function(client, bufnr)
-            client.stop() -- Arrête tsserver
+          filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact" },
+          root_dir = function(fname)
+            return require("lspconfig.util").root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")(
+              fname
+            ) or vim.loop.cwd()
           end,
         },
-        vtsls = {
-          settings = {
-            typescript = {
-              updateImportsOnFileMove = { enabled = "always" },
-              suggest = {
-                completeFunctionCalls = true,
-              },
-              inlayHints = {
-                enumMemberValues = { enabled = false },
-                functionLikeReturnTypes = { enabled = false },
-                parameterNames = { enabled = "literals" },
-                parameterTypes = { enabled = false },
-                propertyDeclarationTypes = { enabled = false },
-                variableTypes = { enabled = false },
-              },
-            },
-          },
-        },
       },
+      -- Configuration pour désactiver tsserver dans les fichiers Vue
       setup = {
-        jdtls = function()
-          return true
+        tsserver = function(_, opts)
+          opts.filetypes = opts.filetypes or {}
+          -- Retirez 'vue' de la liste des filetypes gérés par tsserver
+          opts.filetypes = vim.tbl_filter(function(ft)
+            return ft ~= "vue"
+          end, opts.filetypes)
+          return false -- Retournez false pour que lspconfig continue la configuration
         end,
-        tsserver = function()
-          return false -- Désactiver tsserver pour éviter le conflit
+        ["volar"] = function(_, opts)
+          opts.on_attach = function(client, bufnr)
+            if client.name == "volar" then
+              require("nvim-navic").attach(client, bufnr)
+            end
+            -- Autres configurations on_attach...
+          end
+          return true
         end,
       },
     },

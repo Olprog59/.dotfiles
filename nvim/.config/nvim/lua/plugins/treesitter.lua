@@ -53,6 +53,7 @@ return {
       "yaml",
       "php",
       "phpdoc",
+      "pug",
     },
     -- query_linter = {
     --   enable = true,

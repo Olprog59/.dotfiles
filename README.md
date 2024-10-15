@@ -90,13 +90,13 @@ brew install stow
 ```
 
 ```bash
-Git clone git@github.com:Olprog59/.dotfiles.git
-Cd .dotfiles
-Stow starship
-Stow tmux
-Stow wezterm
-Stow bat
-Stow atac
+git clone git@github.com:Olprog59/.dotfiles.git
+cd .dotfiles
+stow starship
+stow tmux
+stow wezterm
+stow bat
+stow atac
 ```
 
 ### Apps
@@ -150,4 +150,10 @@ brew install orbstack
 brew install cirruslabs/cli/tart
 tart clone ghcr.io/cirruslabs/macos-sonoma-base:latest sonoma-base
 tart run sonoma-base
+```
+
+### prs - Suivez vos pull requests GitHub depuis le terminal [prs](https://tools.dhruvs.space/prs/)
+
+```bash
+brew install dhth/tap/prsgo:go install github.com/dhth/prs@latest
 ```

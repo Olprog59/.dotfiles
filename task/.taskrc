@@ -1,0 +1,23 @@
+sync.server.url=https://tasks.saminthedark.fr
+sync.server.client_id=C0D1CA58-36D9-4996-9E11-86697A70C177
+sync.encryption_secret=2P0YPiPbjZINCcIefCJ3MQApQ3YwnUKis5YAodtJJRiyqDqXmZSKamuRnabJ027R
+sync.data.location=~/task
+recurrence=on
+news.version=3.1.0
+
+color.active=bold cyan
+color.alternate=cyan
+color.blocking=red
+color.blocked=red
+color.due=bold yellow
+color.due.today=bold yellow
+color.negative=red
+color.overdue=bold red
+color.priority.H=bold red
+color.priority.M=bold white
+color.priority.L=white
+color.scheduled=bold blue
+color.tag=bold cyan
+color.waiting=bold blue
+context.entreprise.read=+entreprise
+context.entreprise.write=+entreprise

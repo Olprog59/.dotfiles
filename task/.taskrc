@@ -1,0 +1,19 @@
+include ~/.taskrc.local
+
+color.active=bold cyan
+color.alternate=cyan
+color.blocking=red
+color.blocked=red
+color.due=bold yellow
+color.due.today=bold yellow
+color.negative=red
+color.overdue=bold red
+color.priority.H=bold red
+color.priority.M=bold white
+color.priority.L=white
+color.scheduled=bold blue
+color.tag=bold cyan
+color.waiting=bold blue
+context.entreprise.read=+entreprise
+context.entreprise.write=+entreprise
+

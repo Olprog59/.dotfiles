@@ -47,6 +47,38 @@ return {
           enabled = true,
           indentscope_color = "",
         },
+        telescope = {
+          enabled = true,
+        },
+        aerial = true,
+        alpha = true,
+        dashboard = true,
+        flash = true,
+        grug_far = true,
+        headlines = true,
+        illuminate = true,
+        indent_blankline = { enabled = true },
+        leap = true,
+        lsp_trouble = true,
+        mason = true,
+        markdown = true,
+        native_lsp = {
+          enabled = true,
+          underlines = {
+            errors = { "undercurl" },
+            hints = { "undercurl" },
+            warnings = { "undercurl" },
+            information = { "undercurl" },
+          },
+        },
+        navic = { enabled = true, custom_bg = "lualine" },
+        neotest = true,
+        neotree = true,
+        noice = true,
+        semantic_tokens = true,
+        treesitter_context = true,
+        which_key = true,
+
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
       },
       custom_highlights = function(colors)

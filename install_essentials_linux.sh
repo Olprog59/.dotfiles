@@ -7,23 +7,23 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Paquets communs avec gestion des noms spécifiques par OS
-COMMON_PACKAGES_DEBIAN="bat exa fd-find fzf ripgrep tmux jq zoxide"
-COMMON_PACKAGES_ALPINE="bat exa fd fzf ripgrep tmux jq zoxide"
+COMMON_PACKAGES_DEBIAN="bat exa fd-find fzf ripgrep tmux jq zoxide neovim"
+COMMON_PACKAGES_ALPINE="bat exa fd fzf ripgrep tmux jq zoxide neovim"
 DEBIAN_SPECIFIC="build-essential ffmpeg imagemagick poppler-utils unzip"
 ALPINE_SPECIFIC="alpine-sdk ffmpeg imagemagick poppler unzip"
 
-# Gestion des paquets supplémentaires
+# Installation de paquets supplémentaires
 install_optional_tools() {
   echo "Installation des outils optionnels..."
 
-  # Installation de lazydocker (disponible via binaire GitHub uniquement)
+  # Installation de lazydocker (via binaire GitHub)
   if ! command -v lazydocker &>/dev/null; then
     echo "Installation de lazydocker via binaire..."
     curl -Lo /usr/local/bin/lazydocker https://github.com/jesseduffield/lazydocker/releases/download/v0.13.1/lazydocker_$(uname -s)_$(uname -m).tar.gz
     chmod +x /usr/local/bin/lazydocker
   fi
 
-  # Installation de lazygit (disponible via binaire GitHub uniquement)
+  # Installation de lazygit (via binaire GitHub)
   if ! command -v lazygit &>/dev/null; then
     echo "Installation de lazygit via binaire..."
     curl -Lo /usr/local/bin/lazygit https://github.com/jesseduffield/lazygit/releases/download/v0.37.1/lazygit_$(uname -s)_$(uname -m).tar.gz
@@ -57,6 +57,36 @@ install_alpine() {
   install_optional_tools
 }
 
+# Installation de Oh My Zsh et configuration du thème
+# Installation de Oh My Zsh et configuration du thème
+install_ohmyzsh() {
+  if ! command -v zsh &>/dev/null; then
+    echo "Installation de Zsh..."
+    if [ -f /etc/debian_version ]; then
+      apt install -y zsh
+    elif [ -f /etc/alpine-release ]; then
+      apk add zsh
+    fi
+  fi
+
+  if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    echo "Installation de Oh My Zsh..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    sed -i 's/ZSH_THEME=".*"/ZSH_THEME="ys"/' "$HOME/.zshrc"
+  else
+    echo "Oh My Zsh est déjà installé."
+    sed -i 's/ZSH_THEME=".*"/ZSH_THEME="ys"/' "$HOME/.zshrc"
+  fi
+
+  # Définir Zsh comme shell par défaut
+  if command -v chsh &>/dev/null; then
+    chsh -s $(which zsh) $(whoami)
+  elif [ -f /etc/alpine-release ]; then
+    # Change le shell dans /etc/passwd pour Alpine
+    sed -i "s|^$(whoami):[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:/[^:]*:.*|$(whoami):$(which zsh)|" /etc/passwd
+  fi
+}
+
 # Détection de l'OS
 if [ -f /etc/debian_version ]; then
   install_debian_ubuntu
@@ -67,4 +97,7 @@ else
   exit 1
 fi
 
-echo "Installation terminée."
+# Installation de Oh My Zsh et configuration
+install_ohmyzsh
+
+echo "Installation terminée. Redémarrez le terminal pour que Zsh soit appliqué comme shell par défaut avec le thème 'ys'."

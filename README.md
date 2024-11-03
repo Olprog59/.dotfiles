@@ -157,11 +157,25 @@ tart run sonoma-base
 #### Méthode avec curl
 
 ```bash
-curl -sSL https://github.com/Olprog59/.dotfiles/raw/main/install_essentials_linux.sh | sudo bash
+curl -sSL https://github.com/Olprog59/.dotfiles/raw/main/install_essentials_linux.sh | bash
 ```
 
 #### Méthode avec wget
 
 ```bash
-wget -qO- https://github.com/Olprog59/.dotfiles/raw/main/install_essentials_linux.sh | sudo bash
+wget -qO- https://github.com/Olprog59/.dotfiles/raw/main/install_essentials_linux.sh | bash
+```
+
+### Installation Mac
+
+#### Méthode avec curl
+
+```bash
+curl -sSL https://github.com/Olprog59/.dotfiles/raw/main/install_essentials_mac.sh | bash
+```
+
+#### Méthode avec wget
+
+```bash
+wget -qO- https://github.com/Olprog59/.dotfiles/raw/main/install_essentials_mac.sh | bash
 ```

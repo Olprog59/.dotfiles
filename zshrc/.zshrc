@@ -228,3 +228,4 @@ fi
 export ATAC_KEY_BINDINGS="$HOME/.config/atac/key_bindings.toml"
 export ATAC_THEME="$HOME/.config/atac/theme.toml"
 export ATAC_MAIN_DIR="$HOME/develop/atac"
+eval "$(starship init zsh)"

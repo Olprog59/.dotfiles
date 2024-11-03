@@ -151,3 +151,17 @@ brew install cirruslabs/cli/tart
 tart clone ghcr.io/cirruslabs/macos-sonoma-base:latest sonoma-base
 tart run sonoma-base
 ```
+
+### Installation des packages essentials pour remote-nvim sur les linux (Ubuntu, Debian, Alpine)
+
+#### Méthode avec curl
+
+```bash
+curl -sSL https://github.com/Olprog59/.dotfiles/raw/main/install_essentials_linux.sh | sudo bash
+```
+
+#### Méthode avec wget
+
+```bash
+wget -qO- https://github.com/Olprog59/.dotfiles/raw/main/install_essentials_linux.sh | sudo bash
+```

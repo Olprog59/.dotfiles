@@ -58,7 +58,6 @@ install_alpine() {
 }
 
 # Installation de Oh My Zsh et configuration du thème
-# Installation de Oh My Zsh et configuration du thème
 install_ohmyzsh() {
   if ! command -v zsh &>/dev/null; then
     echo "Installation de Zsh..."
@@ -77,6 +76,16 @@ install_ohmyzsh() {
     echo "Oh My Zsh est déjà installé."
     sed -i 's/ZSH_THEME=".*"/ZSH_THEME="ys"/' "$HOME/.zshrc"
   fi
+
+  # Installation des plugins supplémentaires
+  echo "Installation des plugins Zsh..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-completions.git ~/.oh-my-zsh/custom/plugins/zsh-completions
+  git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
+
+  # Définir les plugins dans .zshrc
+  sed -i 's/plugins=(git)/plugins=(sudo git docker zsh-autosuggestions zsh-syntax-highlighting zsh-completions zsh-history-substring-search)/' "$HOME/.zshrc"
 
   # Définir Zsh comme shell par défaut
   if command -v chsh &>/dev/null; then

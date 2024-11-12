@@ -41,9 +41,11 @@ install_ohmyzsh() {
   echo "Installation des plugins pour Oh My Zsh..."
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
+  git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
   # Activation des plugins dans .zshrc
-  sed -i '' 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/' ~/.zshrc
+  sed -i '' 's/plugins=(git)/plugins=(sudo git docker zsh-autosuggestions zsh-syntax-highlighting zsh-completions zsh-history-substring-search)/' ~/.zshrc
 }
 
 # Installation de NeoVim plugins pour live-server et Markdown Preview

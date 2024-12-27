@@ -6,7 +6,11 @@ config = {
 
 	automatically_reload_config = true,
 	enable_tab_bar = true,
-	send_composed_key_when_left_alt_is_pressed = true,
+	-- Traiter Alt comme Meta (ESC+<touche>)
+	send_composed_key_when_left_alt_is_pressed = false,
+	send_composed_key_when_right_alt_is_pressed = false,
+	-- Activer l'encodage CSI-u pour les séquences Alt
+	enable_csi_u_key_encoding = true,
 	adjust_window_size_when_changing_font_size = false,
 	initial_cols = 200,
 	initial_rows = 60,

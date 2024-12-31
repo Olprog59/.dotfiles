@@ -39,10 +39,10 @@ map("n", "ss", ":split<Return>", { noremap = true, silent = true })
 map("n", "sv", ":vsplit<Return>", { noremap = true, silent = true })
 
 -- Move window
-map("n", "sh", "<C-w>h", { noremap = true })
-map("n", "sk", "<C-w>k", { noremap = true })
-map("n", "sj", "<C-w>j", { noremap = true })
-map("n", "sl", "<C-w>l", { noremap = true })
+map("n", "<C-h>", "<C-w>h", { noremap = true })
+map("n", "<C-k>", "<C-w>k", { noremap = true })
+map("n", "<C-j>", "<C-w>j", { noremap = true })
+map("n", "<C-l>", "<C-w>l", { noremap = true })
 
 -- Resize window
 map("n", "<C-S-h>", "<C-w><", { noremap = true })

@@ -70,9 +70,11 @@ ZSH_THEME="ys"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting dotenv npm)
+plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting dotenv npm kubectl)
 
 source $ZSH/oh-my-zsh.sh
+export KUBECONFIG=~/.kube/config
+alias kubectl="kubecolor"
 
 # User configuration
 
@@ -177,7 +179,7 @@ _fzf_comprun() {
   esac
 }
 
-export BAT_THEME="Catppuccin Mocha"
+# export BAT_THEME="Catppuccin Mocha"
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
@@ -233,3 +235,15 @@ eval "$(starship init zsh)"
 # bun completions
 [ -s "/Users/sam/.bun/_bun" ] && source "/Users/sam/.bun/_bun"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" 
+
+# Added by Windsurf
+export PATH="/Users/sam/.codeium/windsurf/bin:$PATH"
+eval "$(direnv hook zsh)"
+
+alias kg="kubectl get"
+alias kn="kubens"
+alias kx="kubectx"

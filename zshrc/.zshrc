@@ -247,3 +247,7 @@ eval "$(direnv hook zsh)"
 alias kg="kubectl get"
 alias kn="kubens"
 alias kx="kubectx"
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export SOPS="${HOME}/.config/sops"
+export SOPS_AGE_KEY_FILE="$HOME/.config/sops/age/keys.txt"

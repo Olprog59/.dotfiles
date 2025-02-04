@@ -29,9 +29,6 @@ window-inherit-font-size = false
 background-opacity = 0.8
 background-blur-radius = 50
 
-# macos-titlebar-style = hidden
-# window-decoration = true
-
 window-padding-x = 10
 window-padding-y = 10
 window-padding-balance = true
@@ -47,3 +44,4 @@ quick-terminal-autohide = false
 keybind = global:ctrl+`=toggle_quick_terminal
 initial-window = false
 
+scrollback-limit = 4294967295

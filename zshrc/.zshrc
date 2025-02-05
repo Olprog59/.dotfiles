@@ -248,6 +248,9 @@ alias kg="kubectl get"
 alias kn="kubens"
 alias kx="kubectx"
 
+alias kmac="kubectl config use-context macos-talos"
+alias kpve="kubectl config use-context pve-talos"
+
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export SOPS="${HOME}/.config/sops"
 export SOPS_AGE_KEY_FILE="$HOME/.config/sops/age/keys.txt"

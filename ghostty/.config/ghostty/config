@@ -1,36 +1,36 @@
 theme = catppuccin-frappe
 
-keybind = ctrl+d=ignore
-
-# splits
-keybind = ctrl+$=new_split:right
-keybind = ctrl+minus=new_split:down
-
-# vim-tmux style navigation
-keybind = ctrl+f>l=goto_split:right
-keybind = ctrl+f>h=goto_split:left
-keybind = ctrl+f>j=goto_split:bottom
-keybind = ctrl+f>k=goto_split:top
- 
-keybind = ctrl+m=toggle_split_zoom
-
-keybind = super+ctrl+l=resize_split:right,30
-keybind = super+ctrl+h=resize_split:left,30
-keybind = super+ctrl+j=resize_split:down,30
-keybind = super+ctrl+k=resize_split:up,30
-
-keybind = super+ctrl+zero=equalize_splits
+# keybind = ctrl+d=ignore
+#
+# # splits
+# keybind = ctrl+$=new_split:right
+# keybind = ctrl+minus=new_split:down
+#
+# # vim-tmux style navigation
+# keybind = ctrl+f>l=goto_split:right
+# keybind = ctrl+f>h=goto_split:left
+# keybind = ctrl+f>j=goto_split:bottom
+# keybind = ctrl+f>k=goto_split:top
+#
+# keybind = ctrl+m=toggle_split_zoom
+#
+# keybind = super+ctrl+l=resize_split:right,30
+# keybind = super+ctrl+h=resize_split:left,30
+# keybind = super+ctrl+j=resize_split:down,30
+# keybind = super+ctrl+k=resize_split:up,30
+#
+# keybind = super+ctrl+zero=equalize_splits
 
 # font-family = Fira Code
 font-family = 
 # font-size = 20
 window-inherit-font-size = false
 
-background-opacity = 0.8
+background-opacity = 0.7
 background-blur-radius = 50
 
-window-padding-x = 10
-window-padding-y = 10
+# window-padding-x = 10
+# window-padding-y = 10
 window-padding-balance = true
 
 window-height = 40

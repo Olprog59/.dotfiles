@@ -19,10 +19,8 @@ $kubernetes\
 
 # Drop ugly default prompt characters
 [character]
-success_symbol = ''
-error_symbol = ''
-
-# ---
+success_symbol = "[✔](bold green)"
+error_symbol = "[✗](bold red)"
 
 [os]
 format = '[$symbol](bold white) '
@@ -60,7 +58,7 @@ format = 'at [$path]($style)[$read_only]($read_only_style) '
 
 # Shows current git branch
 [git_branch]
-symbol = ' '
+symbol = '🌿 '
 format = 'via [$symbol$branch]($style)'
 # truncation_length = 4
 truncation_symbol = '…/'
@@ -97,7 +95,7 @@ detect_env_vars = ['k8s']
 format = 'via [🐋 $context](blue bold) '
 
 [golang]
-format = ' [🏎💨 go $version](bold cyan) '
+format = 'via [$symbol($version )($mod_version )]($style)'
 
 [java]
 symbol = '🌟 '

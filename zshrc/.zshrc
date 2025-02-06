@@ -70,7 +70,19 @@ ZSH_THEME="ys"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting dotenv npm kubectl)
+plugins=(git
+  sudo
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  dotenv
+  npm
+  kubectl
+  fzf
+  golang
+  brew
+  macos
+  starship
+)
 
 source $ZSH/oh-my-zsh.sh
 export KUBECONFIG=~/.kube/config
@@ -84,6 +96,7 @@ alias kubectl="kubecolor"
 # export LANG=en_US.UTF-8
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+export LC_CTYPE=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -154,7 +167,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-eval "$(starship init zsh)"
+eval "$(LC_ALL="en_US.UTF-8" starship init zsh)"
 
 alias vim='nvim'
 alias n='nvim'
@@ -254,3 +267,4 @@ alias kpve="kubectl config use-context pve-talos"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export SOPS="${HOME}/.config/sops"
 export SOPS_AGE_KEY_FILE="$HOME/.config/sops/age/keys.txt"
+

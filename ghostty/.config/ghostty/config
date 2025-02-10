@@ -21,19 +21,20 @@ theme = catppuccin-frappe
 #
 # keybind = super+ctrl+zero=equalize_splits
 
-# font-family = Fira Code
-font-family = 
-# font-size = 20
+font-family = Fira Code
+# font-family = CaskaydiaCove Nerd Font
+# font-family = Binchotan_Sharp
+font-size = 14
 window-inherit-font-size = false
 
-background-opacity = 0.7
+background-opacity = 0.8
 background-blur-radius = 50
 
 # window-padding-x = 10
 # window-padding-y = 10
 window-padding-balance = true
 
-window-height = 40
+window-height = 50
 window-width = 150
 
 window-save-state = always
@@ -45,3 +46,6 @@ keybind = global:ctrl+`=toggle_quick_terminal
 initial-window = false
 
 scrollback-limit = 4294967295
+
+cursor-opacity = 0.6
+cursor-color="E2E2E2"

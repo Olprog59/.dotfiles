@@ -268,3 +268,8 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export SOPS="${HOME}/.config/sops"
 export SOPS_AGE_KEY_FILE="$HOME/.config/sops/age/keys.txt"
 
+# ------------ postgresql@17 ------------
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@17/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@17/include"

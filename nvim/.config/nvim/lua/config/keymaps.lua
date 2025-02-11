@@ -70,7 +70,7 @@ map("n", "<leader>on", "<cmd>ObsidianNew<CR>", { desc = "Create New Note" })
 map("n", "<leader>os", "<cmd>ObsidianSearch<CR>", { desc = "Search Obsidian" })
 map("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", { desc = "Quick Switch" })
 
-map("", "<leader>ll", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
+-- map("", "<leader>ll", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
 
 -- MiniSurround (réassigné sous <m>)
 map("n", "<m-sr>", '<cmd>lua require("mini.surround").replace()<CR>', default_opts)

@@ -16,7 +16,7 @@
     "jdtls": {
       "java.configuration.runtimes": [
         {
-          "name": "JavaSE-22",
+          "name": "JavaSE-current",
           "path": "/Users/olprog/.sdkman/candidates/java/current/",
           "default": true
         }

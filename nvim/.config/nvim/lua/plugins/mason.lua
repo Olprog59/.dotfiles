@@ -66,7 +66,7 @@ return {
       "some-sass-language-server",
       "stylelint",
       "tailwindcss-language-server",
-      -- "typescript-language-server",
+      "typescript-language-server",
       "phpcs",
       "php-cs-fixer",
       "actionlint",

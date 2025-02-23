@@ -53,11 +53,12 @@ return {
     explorer = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
+    animate = { enabled = false },
     notifier = {
       enabled = true,
       timeout = 3000,
     },
-    picker = { enabled = true, hidden = true, ignored = true, folow = true },
+    picker = { enabled = true, hidden = true, ignored = true, follow = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
     scroll = { enabled = true },

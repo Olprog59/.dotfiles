@@ -23,78 +23,78 @@
 
           nixpkgs.config.allowUnfree = true;
 
-          environment.systemPackages = [
-            pkgs.neovim
-            pkgs.mkalias
-            pkgs.obsidian
-            pkgs.arc-browser
-            pkgs.cargo
-            pkgs.nixfmt-rfc-style
-            pkgs.nodejs_23
-            pkgs.kubectl
-            pkgs.kubecolor
-            pkgs.kubescape
-            pkgs.zsh
-            pkgs.ripgrep
-            pkgs.tmux
-            pkgs.starship
-            pkgs.fzf
-            pkgs.zoxide
-            pkgs.direnv
-            pkgs.rbenv
-            pkgs.age
-            pkgs.curl
-            pkgs.atac
-            pkgs.autoconf
-            pkgs.docker
-            pkgs.bat
-            pkgs.exiftool
-            pkgs.fd
-            pkgs.imagemagick
-            pkgs.ffmpeg
-            pkgs.figlet
-            pkgs.terraform
-            pkgs.tmux
-            pkgs.topgrade
-            pkgs.tree
-            pkgs.tree-sitter
-            pkgs.postgresql_17
-            pkgs.nmap
-            pkgs.watch
-            pkgs.biome
-            pkgs.btop
-            pkgs.bun
-            pkgs.wget
-            pkgs.uv
-            pkgs.jq
-            pkgs.k9s
-            pkgs.openssl_3
-            pkgs.lolcat
-            pkgs.butane
-            pkgs.kubectx
-            pkgs.lua
-            pkgs.sqlite
-            pkgs.yarn
-            pkgs.kustomize
-            pkgs.luarocks
-            pkgs.gh
-            pkgs.lazydocker
-            pkgs.lazygit
-            pkgs.lazysql
-            pkgs.cmake
-            pkgs.gitflow
-            pkgs.colima
-            pkgs.popeye
-            pkgs.sshs
-            pkgs.stow
-            pkgs.yazi
-            pkgs.zsh
-            pkgs.talosctl
-            pkgs.mediainfo
-            pkgs.sops
-            pkgs.samba
-            pkgs.qemu
-            pkgs.tart
+          environment.systemPackages = with pkgs; [
+            neovim
+            mkalias
+            obsidian
+            arc-browser
+            cargo
+            nixfmt-rfc-style
+            nodejs_23
+            kubectl
+            kubecolor
+            kubescape
+            zsh
+            ripgrep
+            tmux
+            starship
+            fzf
+            zoxide
+            direnv
+            rbenv
+            age
+            curl
+            atac
+            autoconf
+            docker
+            bat
+            exiftool
+            fd
+            imagemagick
+            ffmpeg
+            figlet
+            terraform
+            tmux
+            topgrade
+            tree
+            tree-sitter
+            postgresql_17
+            nmap
+            watch
+            biome
+            btop
+            bun
+            wget
+            uv
+            jq
+            openssl_3
+            lolcat
+            butane
+            kubectx
+            lua
+            sqlite
+            yarn
+            kustomize
+            luarocks
+            gh
+            lazydocker
+            lazygit
+            lazysql
+            cmake
+            gitflow
+            colima
+            popeye
+            sshs
+            stow
+            yazi
+            zsh
+            talosctl
+            mediainfo
+            sops
+            samba
+            qemu
+            tart
+            superfile
 
           ];
 
@@ -123,6 +123,7 @@
               "make"
               "colima"
               "surreal"
+              "k9s"
             ];
             taps = [
               "surrealdb/tap"

@@ -105,6 +105,10 @@ export LC_CTYPE=en_US.UTF-8
 #   export EDITOR='mvim'
 # fi
 
+export EDITOR='nvim'
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -273,3 +277,5 @@ export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 
 export LDFLAGS="-L/opt/homebrew/opt/postgresql@17/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/postgresql@17/include"
+
+alias spf="superfile"

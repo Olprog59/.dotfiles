@@ -53,7 +53,7 @@ return {
     explorer = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
-    animate = { enabled = false },
+    animate = { enabled = true },
     notifier = {
       enabled = true,
       timeout = 3000,

@@ -10,6 +10,11 @@ nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch 
 darwin-rebuild switch - flake .
 ```
 
+```bash
+nix flake update
+darwin-rebuild switch --flake .
+```
+
 # Erreur de certificats
 
 ```bash

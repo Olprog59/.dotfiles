@@ -134,9 +134,9 @@ export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$PATH
 
 
-export PATH="$PATH:/opt/homebrew/opt/"
-export CPATH="/opt/homebrew/include/"
-export HDF5_DIR=/opt/homebrew/
+# export PATH="$PATH:/opt/homebrew/opt/"
+# export CPATH="/opt/homebrew/include/"
+# export HDF5_DIR=/opt/homebrew/
 
 export PATH="$PATH:$HOME/go/bin"
 
@@ -145,9 +145,9 @@ export PATH="$PATH:$HOME/go/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/llvm/lib -Wl,-rpath,/opt/homebrew/opt/llvm/lib/c++"
-export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+# export LDFLAGS="-L/opt/homebrew/opt/llvm/lib -Wl,-rpath,/opt/homebrew/opt/llvm/lib/c++"
+# export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -279,3 +279,4 @@ export LDFLAGS="-L/opt/homebrew/opt/postgresql@17/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/postgresql@17/include"
 
 alias spf="superfile"
+export PATH="/Users/sam/.bun/bin:$PATH"

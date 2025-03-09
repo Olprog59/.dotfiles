@@ -95,6 +95,8 @@
             qemu
             tart
             superfile
+            ncftp
+            inetutils
 
           ];
 
@@ -178,8 +180,10 @@
               "/System/Applications/Launchpad.app/"
               "/Applications/Arc.app"
               "/Applications/Ghostty.app"
+              "/System/Cryptexes/App/System/Applications/Safari.app"
               "/Applications/Setapp/Canary Mail.app"
               "/System/Applications/Messages.app"
+              "/System/Applications/FaceTime.app"
               "/System/Applications/Maps.app"
               "/System/Applications/Photos.app"
               "/System/Applications/Calendar.app"
@@ -190,7 +194,7 @@
             loginwindow.GuestEnabled = false;
             NSGlobalDomain.AppleICUForce24HourTime = true;
             NSGlobalDomain.KeyRepeat = 2;
-            NSGlobalDomain.InitialKeyRepeat = 120;
+            NSGlobalDomain.InitialKeyRepeat = 15;
             NSGlobalDomain.AppleShowAllFiles = true;
 
           };
@@ -206,7 +210,7 @@
           {
             nix-homebrew = {
               enable = true;
-              enableRosetta = true;
+              enableRosetta = false;
               user = "sam";
               autoMigrate = true;
             };

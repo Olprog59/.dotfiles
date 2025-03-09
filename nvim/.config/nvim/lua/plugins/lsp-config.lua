@@ -37,7 +37,13 @@ return {
         end,
       },
       -- Serveur de langage pour Vue (Volar)
-      volar = {},
+      volar = {
+        filetypes = {
+          "typescript",
+          "vue",
+        },
+        root_dir = util.root_pattern("src/App.vue"),
+      },
       -- Serveur de langage pour React (tsserver)
       tsserver = { enabled = false },
       -- Désactiver les serveurs inutiles pour éviter les conflits

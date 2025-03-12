@@ -124,10 +124,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Append to shell profile
 
 # Python 3.11
-export PATH="$(brew --prefix)/opt/python@3.11/libexec/bin:$PATH"
+# export PATH="$(brew --prefix)/opt/python@3.11/libexec/bin:$PATH"
 
 export PATH="/usr/local/bin:${PATH}"
-export PATH="/Users/olprog/.jetbrains_app:${PATH}"
+# export PATH="/Users/olprog/.jetbrains_app:${PATH}"
 export PATH="$PATH:$HOME/develop/flutter/bin"
 # export PATH="$PATH:/opt/homebrew/Cellar/dart/2.17.0/bin"
 export GEM_HOME=$HOME/.gem
@@ -280,3 +280,6 @@ export CPPFLAGS="-I/opt/homebrew/opt/postgresql@17/include"
 
 alias spf="superfile"
 export PATH="/Users/sam/.bun/bin:$PATH"
+
+alias python3="python"
+alias pip3="pip"

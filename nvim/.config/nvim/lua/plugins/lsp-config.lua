@@ -1,3 +1,5 @@
+local util = require("lspconfig.util")
+
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
@@ -37,6 +39,8 @@ return {
         end,
       },
       -- Serveur de langage pour Vue (Volar)
+      -- Install npm install -g @vue/language-server
+      -- Install npm install -g @vue/typescript-plugin
       volar = {
         filetypes = {
           "typescript",

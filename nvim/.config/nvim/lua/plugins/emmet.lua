@@ -1,3 +1,4 @@
+-- npm install -g @kozer/emmet-language-server
 return {
   "olrtg/emmet-language-server",
   config = function()
@@ -14,7 +15,7 @@ return {
         "scss",
         "pug",
         "typescriptreact",
-        "vue",
+        -- "vue",
       },
       callback = function()
         vim.lsp.start({

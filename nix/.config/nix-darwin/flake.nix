@@ -26,7 +26,7 @@
           environment.systemPackages = with pkgs; [
             neovim
             mkalias
-            obsidian
+            # obsidian
             arc-browser
             cargo
             nixfmt-rfc-style
@@ -97,7 +97,16 @@
             superfile
             ncftp
             inetutils
-
+            python312
+            python312Packages.pip
+            python312Packages.virtualenvwrapper
+            python312Packages.pyside6
+            pipx
+            ansible
+            ansible-lint
+            php
+            pnpm
+            moreutils
           ];
 
           homebrew = {
@@ -125,7 +134,8 @@
               "make"
               "colima"
               "surreal"
-              "k9s"
+              "derailed/k9s/k9s"
+              "talhelper"
             ];
             taps = [
               "surrealdb/tap"

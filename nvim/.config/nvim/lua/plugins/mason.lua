@@ -19,6 +19,8 @@ return {
       "yaml-language-server",
       "vim-language-server",
       "textlint",
+      "vim-language-server",
+      "google-java-format",
       "sqlls",
       "standardjs",
       "sqlfmt",

@@ -118,3 +118,74 @@ map("x", "<leader>i", '<cmd>lua require("surround").surround_add()<CR>', default
 -- Mode opérateur
 map("o", "<leader>a", '<cmd>lua require("surround").surround_add()<CR>', default_opts)
 map("o", "<leader>i", '<cmd>lua require("surround").surround_add()<CR>', default_opts)
+
+-- Keymap to switch spelling language to English lamw25wmal
+-- To save the language settings configured on each buffer, you need to add
+-- "localoptions" to vim.opt.sessionoptions in the `lua/config/options.lua` file
+vim.keymap.set("n", "<leader>msle", function()
+  vim.opt.spelllang = "en"
+  vim.cmd("echo 'Spell language set to English'")
+end, { desc = "[P]Spelling language English" })
+
+-- HACK: neovim spell multiple languages
+-- https://youtu.be/uLFAMYFmpkE
+--
+-- Keymap to switch spelling language to Spanish lamw25wmal
+vim.keymap.set("n", "<leader>mslf", function()
+  vim.opt.spelllang = "fr"
+  vim.cmd("echo 'Spell language set to French'")
+end, { desc = "[P]Spelling language French" })
+
+-- HACK: neovim spell multiple languages
+-- https://youtu.be/uLFAMYFmpkE
+--
+-- Keymap to switch spelling language to both spanish and english lamw25wmal
+vim.keymap.set("n", "<leader>mslb", function()
+  vim.opt.spelllang = "en,fr"
+  vim.cmd("echo 'Spell language set to French and English'")
+end, { desc = "[P]Spelling language French and English" })
+
+-- HACK: neovim spell multiple languages
+-- https://youtu.be/uLFAMYFmpkE
+--
+-- Show spelling suggestions / spell suggestions
+vim.keymap.set("n", "<leader>mss", function()
+  -- Simulate pressing "z=" with "m" option using feedkeys
+  -- vim.api.nvim_replace_termcodes ensures "z=" is correctly interpreted
+  -- 'm' is the {mode}, which in this case is 'Remap keys'. This is default.
+  -- If {mode} is absent, keys are remapped.
+  --
+  -- I tried this keymap as usually with
+  vim.cmd("normal! 1z=")
+  -- But didn't work, only with nvim_feedkeys
+  -- vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("z=", true, false, true), "m", true)
+end, { desc = "[P]Spelling suggestions" })
+
+-- HACK: neovim spell multiple languages
+-- https://youtu.be/uLFAMYFmpkE
+--
+-- markdown good, accept spell suggestion
+-- Add word under the cursor as a good word
+vim.keymap.set("n", "<leader>msg", function()
+  vim.cmd("normal! zg")
+end, { desc = "[P]Spelling add word to spellfile" })
+
+-- HACK: neovim spell multiple languages
+-- https://youtu.be/uLFAMYFmpkE
+--
+-- Undo zw, remove the word from the entry in 'spellfile'.
+vim.keymap.set("n", "<leader>msu", function()
+  vim.cmd("normal! zug")
+end, { desc = "[P]Spelling undo, remove word from list" })
+
+-- HACK: neovim spell multiple languages
+-- https://youtu.be/uLFAMYFmpkE
+--
+-- Repeat the replacement done by |z=| for all matches with the replaced word
+-- in the current window.
+vim.keymap.set("n", "<leader>msr", function()
+  -- vim.cmd(":spellr")
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(":spellr\n", true, false, true), "m", true)
+end, { desc = "[P]Spelling repeat" })
+
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action", silent = true })

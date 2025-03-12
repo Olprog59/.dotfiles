@@ -17,7 +17,7 @@
       "java.configuration.runtimes": [
         {
           "name": "JavaSE-current",
-          "path": "/Users/olprog/.sdkman/candidates/java/current/",
+          "path": "~/.sdkman/candidates/java/current/",
           "default": true
         }
       ]

@@ -26,7 +26,7 @@
           environment.systemPackages = with pkgs; [
             neovim
             mkalias
-            # obsidian
+            obsidian
             arc-browser
             cargo
             nixfmt-rfc-style

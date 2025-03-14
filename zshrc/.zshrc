@@ -86,6 +86,8 @@ plugins=(git
 
 source $ZSH/oh-my-zsh.sh
 export KUBECONFIG=~/.kube/config
+
+export KUBE_EDITOR=nvim
 alias kubectl="kubecolor"
 
 # User configuration

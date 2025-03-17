@@ -188,4 +188,4 @@ vim.keymap.set("n", "<leader>msr", function()
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(":spellr\n", true, false, true), "m", true)
 end, { desc = "[P]Spelling repeat" })
 
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action", silent = true })
+-- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action", silent = true })

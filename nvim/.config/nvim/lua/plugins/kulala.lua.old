@@ -46,6 +46,8 @@ return {
       },
     },
 
+    global_keymaps = true,
+
     -- can be used to show loading, done and error icons in inlay hints
     -- possible values: "on_request", "above_request", "below_request", or nil to disable
     -- If "above_request" or "below_request" is used, the icons will be shown above or below the request line

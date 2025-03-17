@@ -141,6 +141,7 @@
               "surrealdb/tap"
             ];
             onActivation.cleanup = "zap";
+            onActivation.upgrade = true;
           };
 
           fonts.packages = [

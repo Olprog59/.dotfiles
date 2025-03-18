@@ -26,8 +26,6 @@
           environment.systemPackages = with pkgs; [
             neovim
             mkalias
-            obsidian
-            arc-browser
             cargo
             nixfmt-rfc-style
             nodejs_23
@@ -58,23 +56,17 @@
             topgrade
             tree
             tree-sitter
-            postgresql_17
             nmap
             watch
             biome
             btop
-            bun
             wget
             uv
             jq
             openssl_3
             lolcat
-            butane
             kubectx
             lua
-            sqlite
-            yarn
-            kustomize
             luarocks
             gh
             lazydocker
@@ -83,7 +75,6 @@
             cmake
             gitflow
             colima
-            popeye
             sshs
             stow
             yazi
@@ -93,7 +84,6 @@
             sops
             samba
             qemu
-            tart
             superfile
             ncftp
             inetutils
@@ -113,32 +103,17 @@
             enable = true;
             casks = [
               "ghostty"
-              "betterdisplay"
-              "deskpad"
               "font-noto-emoji"
-              "keycastr"
-              "headlamp"
               "the-unarchiver"
-              "bruno"
               "raycast"
             ];
             brews = [
               "go"
               "helm"
-              "docker"
-              "docker-compose"
-              "docker-credential-helper"
-              "ollama"
               "git"
               "clang-format"
               "make"
               "colima"
-              "surreal"
-              "derailed/k9s/k9s"
-              "talhelper"
-            ];
-            taps = [
-              "surrealdb/tap"
             ];
             onActivation.cleanup = "zap";
           };
@@ -170,7 +145,10 @@
             '';
 
           # Necessary for using flakes on this system.
-          nix.settings.experimental-features = [ "nix-command" "flakes" ];
+          nix.settings.experimental-features = [
+            "nix-command"
+            "flakes"
+          ];
 
           environment.variables.EDITOR = "nvim";
 
@@ -190,15 +168,8 @@
             dock.autohide = true;
             dock.persistent-apps = [
               "/System/Applications/Launchpad.app/"
-              "/Applications/Arc.app"
               "/Applications/Ghostty.app"
               "/System/Cryptexes/App/System/Applications/Safari.app"
-              "/Applications/Setapp/Canary Mail.app"
-              "/System/Applications/Messages.app"
-              "/System/Applications/FaceTime.app"
-              "/System/Applications/Maps.app"
-              "/System/Applications/Photos.app"
-              "/System/Applications/Calendar.app"
               "/System/Applications/System Settings.app"
 
             ];
@@ -217,7 +188,7 @@
     in
     {
       # Build darwin flake using:
-      darwinConfigurations."Mac-mini" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."Samuels-Mac-mini" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
           nix-homebrew.darwinModules.nix-homebrew

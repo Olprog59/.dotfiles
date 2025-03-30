@@ -163,6 +163,7 @@ return {
           "typescriptreact",
           "vue",
           "angular",
+          "php",
         },
       },
       -- Autres serveurs de langage que vous souhaitez utiliser

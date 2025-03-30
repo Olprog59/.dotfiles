@@ -93,3 +93,5 @@ opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
 
 opt.updatetime = 50
 opt.conceallevel = 2
+
+vim.g.lazyvim_php_lsp = "intelephense"

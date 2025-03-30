@@ -15,6 +15,7 @@ return {
         "scss",
         "pug",
         "typescriptreact",
+        "php",
         -- "vue",
       },
       callback = function()
@@ -22,6 +23,19 @@ return {
           cmd = { "emmet-language-server", "--stdio" },
           root_dir = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1]),
           init_options = {
+            includeLanguages = {
+              css = "css",
+              eruby = "eruby",
+              html = "html",
+              javascript = "javascript",
+              javascriptreact = "javascriptreact",
+              less = "less",
+              sass = "sass",
+              scss = "scss",
+              pug = "pug",
+              typescriptreact = "typescriptreact",
+              php = "html", -- Ceci est correct, mais le reste doit suivre cette structure
+            },
             html = {
               options = {
                 ["bem.enabled"] = true,

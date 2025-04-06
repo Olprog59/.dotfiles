@@ -104,9 +104,15 @@
             pipx
             ansible
             ansible-lint
-            php
+            php84
+            php84Packages.composer
             pnpm
             moreutils
+            typst
+            redis
+            tilt
+            cosign
+            qmk
           ];
 
           homebrew = {
@@ -125,9 +131,9 @@
             brews = [
               "go"
               "helm"
-              "docker"
-              "docker-compose"
-              "docker-credential-helper"
+              # "docker"
+              # "docker-compose"
+              # "docker-credential-helper"
               "ollama"
               "git"
               "clang-format"
@@ -207,6 +213,7 @@
             NSGlobalDomain.KeyRepeat = 2;
             NSGlobalDomain.InitialKeyRepeat = 15;
             NSGlobalDomain.AppleShowAllFiles = true;
+            NSGlobalDomain.ApplePressAndHoldEnabled = true;
 
           };
         };

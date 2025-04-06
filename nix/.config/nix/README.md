@@ -93,3 +93,12 @@ diskutil list
 ```
 
 If you do see a "Nix Store" volume, delete it by re-running the diskutil deleteVolume command, but replace /nix with the store volume's diskXsY identifier.
+
+## If you do see a "Nix Store" volume, delete it by re-running the diskutil deleteVolume command, but replace /nix with the store volume's diskXsY identifier.
+
+# Update Package
+
+```bash
+nix flake update
+darwin-rebuild switch --flake .
+```

@@ -53,7 +53,6 @@
             imagemagick
             ffmpeg
             figlet
-            terraform
             tmux
             topgrade
             tree
@@ -93,26 +92,20 @@
             sops
             samba
             qemu
-            tart
             superfile
-            ncftp
             inetutils
             python312
             python312Packages.pip
             python312Packages.virtualenvwrapper
             python312Packages.pyside6
             pipx
-            ansible
-            ansible-lint
-            php84
-            php84Packages.composer
             pnpm
             moreutils
             typst
-            redis
             tilt
-            cosign
-            qmk
+            zsh-syntax-highlighting
+            zsh-autocomplete
+            zsh-autosuggestions
           ];
 
           homebrew = {
@@ -120,10 +113,8 @@
             casks = [
               "ghostty"
               "betterdisplay"
-              "deskpad"
               "font-noto-emoji"
               "keycastr"
-              "headlamp"
               "the-unarchiver"
               "bruno"
               "raycast"
@@ -131,22 +122,19 @@
             brews = [
               "go"
               "helm"
-              # "docker"
-              # "docker-compose"
-              # "docker-credential-helper"
-              "ollama"
               "git"
               "clang-format"
               "make"
-              "surreal"
               "derailed/k9s/k9s"
-              "talhelper"
             ];
             taps = [
               "surrealdb/tap"
             ];
             onActivation.cleanup = "zap";
-            onActivation.upgrade = true;
+            onActivation = {
+              autoUpdate = true;
+              upgrade = true;
+            };
           };
 
           fonts.packages = [
@@ -188,7 +176,7 @@
           system.stateVersion = 6;
 
           # The platform the configuration will be used on.
-          nixpkgs.hostPlatform = "aarch64-darwin";
+          nixpkgs.hostPlatform = "x86_64-darwin";
 
           system.defaults = {
             dock.autohide = true;
@@ -220,14 +208,13 @@
     {
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#Mac-Studio
-      darwinConfigurations."Mac-Studio" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."MacBook-Pro-de-Samuel" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
               enable = true;
-              enableRosetta = false;
               user = "sam";
               autoMigrate = true;
             };

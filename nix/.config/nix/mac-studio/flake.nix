@@ -116,8 +116,6 @@
             bitwarden-desktop
             keycastr
             the-unarchiver
-            minio-client
-            rclone
           ];
 
           homebrew = {
@@ -133,9 +131,6 @@
             brews = [
               "go"
               "helm"
-              # "docker"
-              # "docker-compose"
-              # "docker-credential-helper"
               "ollama"
               "git"
               "clang-format"
@@ -148,8 +143,11 @@
             taps = [
               "surrealdb/tap"
             ];
-            onActivation.cleanup = "zap";
-            onActivation.upgrade = true;
+            onActivation = {
+              cleanup = "zap";
+              autoUpdate = true;
+              upgrade = true;
+            };
           };
 
           fonts.packages = [

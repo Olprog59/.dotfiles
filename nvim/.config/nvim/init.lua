@@ -19,8 +19,10 @@ require("config.keymaps")
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter", "TabEnter" }, {
   callback = function()
     vim.diagnostic.config({
-      virtual_text = false,
-      virtual_lines = true,
+      virtual_text = true,
+      virtual_lines = { current_line = true },
+      underline = true,
+      update_in_insert = false,
     })
   end,
 })

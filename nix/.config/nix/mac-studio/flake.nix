@@ -104,8 +104,8 @@
             pipx
             ansible
             ansible-lint
-            php84
-            php84Packages.composer
+            # php84
+            # php84Packages.composer
             pnpm
             moreutils
             typst
@@ -113,6 +113,9 @@
             tilt
             cosign
             qmk
+            bitwarden-desktop
+            keycastr
+            the-unarchiver
           ];
 
           homebrew = {
@@ -122,18 +125,12 @@
               "betterdisplay"
               "deskpad"
               "font-noto-emoji"
-              "keycastr"
-              "headlamp"
-              "the-unarchiver"
               "bruno"
               "raycast"
             ];
             brews = [
               "go"
               "helm"
-              # "docker"
-              # "docker-compose"
-              # "docker-credential-helper"
               "ollama"
               "git"
               "clang-format"
@@ -145,8 +142,11 @@
             taps = [
               "surrealdb/tap"
             ];
-            onActivation.cleanup = "zap";
-            onActivation.upgrade = true;
+            onActivation = {
+              cleanup = "zap";
+              autoUpdate = true;
+              upgrade = true;
+            };
           };
 
           fonts.packages = [

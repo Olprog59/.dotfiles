@@ -130,10 +130,10 @@
             taps = [
               "surrealdb/tap"
             ];
-            onActivation.cleanup = "zap";
             onActivation = {
               autoUpdate = true;
               upgrade = true;
+              cleanup = "zap";
             };
           };
 
@@ -182,7 +182,6 @@
             dock.autohide = true;
             dock.persistent-apps = [
               "/System/Applications/Launchpad.app/"
-              "/Applications/Arc.app"
               "/Applications/Ghostty.app"
               "/System/Cryptexes/App/System/Applications/Safari.app"
               "/Applications/Setapp/Canary Mail.app"

@@ -3,3 +3,4 @@
 **/*.jpg
 
 .taskrc.local
+**/lazy-lock.json

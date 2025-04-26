@@ -24,16 +24,43 @@
           nixpkgs.config.allowUnfree = true;
 
           environment.systemPackages = with pkgs; [
+            # Éditeurs et outils d'édition
             neovim
+
+            # Outils système
             mkalias
+
+            # Applications de productivité
             obsidian
             arc-browser
+
+            # Langages de programmation et environnements de développement
             cargo
-            nixfmt-rfc-style
             nodejs_23
-            kubectl
-            kubecolor
-            kubescape
+            rbenv
+            python3.withPackages
+            (
+              ps: with ps; [
+                pip
+                virtualenv
+                pyside6
+              ]
+            )
+            pipx
+            pipenv
+            # php84
+            # php84Packages.composer
+            pnpm
+            bun
+            lua
+            luarocks
+
+            # Formatage et linting
+            nixfmt-rfc-style
+            biome
+            # ansible-lint
+
+            # Outils terminal et shell
             zsh
             ripgrep
             tmux
@@ -41,81 +68,97 @@
             fzf
             zoxide
             direnv
-            rbenv
-            age
             curl
-            atac
-            autoconf
-            docker
             bat
-            exiftool
             fd
-            imagemagick
-            ffmpeg
             figlet
-            terraform
             tmux
             topgrade
             tree
-            tree-sitter
-            postgresql_17
-            nmap
             watch
-            biome
             btop
-            bun
             wget
             uv
-            jq
-            openssl_3
             lolcat
-            butane
-            kubectx
-            lua
-            sqlite
-            yarn
-            kustomize
-            luarocks
-            gh
             lazydocker
             lazygit
             lazysql
-            cmake
-            gitflow
-            colima
-            popeye
             sshs
             stow
             yazi
             zsh
+
+            # Kubernetes et containers
+            kubectl
+            kubecolor
+            kubescape
+            kubectx
+            kustomize
+            popeye
             talosctl
+            tilt
+            docker
+            colima
+
+            # Infrastructure as Code
+            terraform
+            # ansible
+            butane
+
+            # Base de données
+            postgresql_17
+            sqlite
+            redis
+
+            # Traitement média
+            exiftool
+            imagemagick
+            ffmpeg
             mediainfo
-            sops
-            samba
+
+            # Virtualisation
             qemu
             tart
-            superfile
-            ncftp
-            inetutils
-            python312
-            python312Packages.pip
-            python312Packages.virtualenvwrapper
-            python312Packages.pyside6
-            pipx
-            ansible
-            ansible-lint
-            # php84
-            # php84Packages.composer
-            pnpm
-            moreutils
-            typst
-            redis
-            tilt
+
+            # Sécurité et cryptographie
+            age
+            nmap
+            openssl_3
+            sops
             cosign
+
+            # Réseau
+            inetutils
+            ncftp
+            samba
+
+            # Git et outils de versioning
+            gh
+            gitflow
+
+            # JSON et traitement de données
+            jq
+
+            # Outils de compilation
+            autoconf
+            cmake
+            tree-sitter
+
+            # Périphériques
             qmk
+
+            # Applications bureautiques
             bitwarden-desktop
             keycastr
             the-unarchiver
+
+            # Typographie et documents
+            typst
+
+            # Utilitaires divers
+            atac
+            superfile
+            moreutils
           ];
 
           homebrew = {

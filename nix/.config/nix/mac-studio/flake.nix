@@ -38,18 +38,15 @@
             cargo
             nodejs_23
             rbenv
-            python3.withPackages
-            (
+            (python3.withPackages (
               ps: with ps; [
                 pip
                 virtualenv
                 pyside6
               ]
-            )
+            ))
             pipx
             pipenv
-            # php84
-            # php84Packages.composer
             pnpm
             bun
             lua

@@ -8,7 +8,7 @@ return {
     provider = "ollama",
     ollama = {
       -- model = "deepseek-r1:32b",
-      model = "gemma3:12b",
+      model = "qwen3:30b-a3b",
     },
     -- openai = {
     --   endpoint = "https://api.openai.com/v1",

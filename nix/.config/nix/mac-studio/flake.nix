@@ -36,7 +36,7 @@
 
             # Langages de programmation et environnements de développement
             cargo
-            nodejs_23
+            nodejs_24
             rbenv
             (python3.withPackages (
               ps: with ps; [
@@ -96,6 +96,7 @@
             tilt
             docker
             colima
+            kompose
 
             # Infrastructure as Code
             terraform
@@ -178,6 +179,7 @@
               "surreal"
               "derailed/k9s/k9s"
               "talhelper"
+              "templ"
             ];
             taps = [
               "surrealdb/tap"

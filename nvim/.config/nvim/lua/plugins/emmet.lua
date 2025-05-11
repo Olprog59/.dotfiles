@@ -16,7 +16,7 @@ return {
         "pug",
         "typescriptreact",
         "php",
-        -- "vue",
+        "vue",
       },
       callback = function()
         vim.lsp.start({

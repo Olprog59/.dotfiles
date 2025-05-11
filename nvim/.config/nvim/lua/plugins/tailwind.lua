@@ -3,7 +3,21 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        tailwindcss = {},
+        tailwindcss = {
+          filetypes_include = { "templ" }, -- Ajoutez les fichiers templ
+          init_options = {
+            userLanguages = {
+              templ = "html",
+            },
+          },
+          settings = {
+            tailwindCSS = {
+              includeLanguages = {
+                templ = "html",
+              },
+            },
+          },
+        },
       },
     },
   },

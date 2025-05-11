@@ -27,3 +27,10 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter", "TabEnter" }, {
   end,
 })
 -- vim.go.background = "light"
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "templ",
+--   callback = function()
+--     vim.treesitter.language.register("html", "templ") -- Forcer le parsing HTML
+--     vim.bo.filetype = "html.templ" -- Combiner les deux syntaxes
+--   end,
+-- })

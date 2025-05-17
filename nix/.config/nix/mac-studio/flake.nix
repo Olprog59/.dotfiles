@@ -74,6 +74,7 @@
             tree
             watch
             btop
+            neohtop
             wget
             uv
             lolcat
@@ -101,7 +102,7 @@
             # Infrastructure as Code
             terraform
             # ansible
-            butane
+            # butane
 
             # Base de données
             postgresql_17
@@ -129,6 +130,7 @@
             inetutils
             ncftp
             samba
+            rustscan
 
             # Git et outils de versioning
             gh

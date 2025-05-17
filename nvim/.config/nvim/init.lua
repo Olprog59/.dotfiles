@@ -34,3 +34,12 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter", "TabEnter" }, {
 --     vim.bo.filetype = "html.templ" -- Combiner les deux syntaxes
 --   end,
 -- })
+
+vim.filetype.add({
+  extension = {
+    templ = "templ",
+  },
+  pattern = {
+    [".*%.templ"] = "templ",
+  },
+})

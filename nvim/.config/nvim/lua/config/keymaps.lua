@@ -6,6 +6,9 @@ local default_opts = { noremap = true, silent = true }
 -- map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
 -- map("n", "<leader>$", "<C-W>v", { desc = "Split Window Right", remap = true })
 --
+
+map("n", "<leader>xe", "<cmd>lua vim.diagnostic.open_float()<CR>", { noremap = true })
+
 map("n", "<tab>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 map("n", "<S-tab>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 

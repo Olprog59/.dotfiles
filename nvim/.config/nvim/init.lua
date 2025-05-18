@@ -19,13 +19,22 @@ require("config.keymaps")
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter", "TabEnter" }, {
   callback = function()
     vim.diagnostic.config({
-      virtual_text = true,
-      virtual_lines = { current_line = true },
+      virtual_text = false,
+      virtual_lines = { current_line = true, overlay = true, only_current_line = true },
       underline = true,
       update_in_insert = false,
     })
   end,
 })
+
+vim.api.nvim_create_autocmd("WinResized", {
+  pattern = "*",
+  callback = function()
+    vim.diagnostic.hide()
+    vim.diagnostic.show()
+  end,
+})
+
 -- vim.go.background = "light"
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = "templ",

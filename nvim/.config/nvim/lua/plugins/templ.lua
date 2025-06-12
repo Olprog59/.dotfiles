@@ -12,6 +12,13 @@ return {
             completeFunctionCalls = true,
           },
         },
+        filetypes = {
+          "javascript",
+          "typescript",
+          "javascriptreact",
+          "typescriptreact",
+          "templ", -- Ajout crucial ici
+        },
       },
       templ = {
         on_attach = function(client, bufnr)
@@ -22,6 +29,15 @@ return {
             callback = function()
               local node = vim.treesitter.get_node()
               vim.b[bufnr].emmet_enabled = node and node:type() == "element"
+            end,
+          })
+          vim.api.nvim_create_autocmd("CursorHold", {
+            buffer = bufnr,
+            callback = function()
+              local js_node = require("nvim-treesitter.ts_utils").get_node_at_cursor():type():find("javascript")
+              if js_node then
+                vim.lsp.buf.format({ async = false, name = "tsserver" })
+              end
             end,
           })
         end,

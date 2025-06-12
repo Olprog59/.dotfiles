@@ -24,8 +24,12 @@
           nixpkgs.config.allowUnfree = true;
 
           environment.systemPackages = with pkgs; [
+            # AI
+            claude-code
+
             # Éditeurs et outils d'édition
             neovim
+            jdt-language-server
 
             # Outils système
             mkalias
@@ -159,6 +163,8 @@
             atac
             superfile
             moreutils
+
+            alt-tab-macos
           ];
 
           homebrew = {
@@ -234,10 +240,13 @@
           # The platform the configuration will be used on.
           nixpkgs.hostPlatform = "aarch64-darwin";
 
+          system.primaryUser = "sam";
+
           system.defaults = {
             dock.autohide = true;
             dock.persistent-apps = [
               "/System/Applications/Launchpad.app/"
+              "/Applications/Zen.app"
               "/Applications/Arc.app"
               "/Applications/Ghostty.app"
               "/System/Cryptexes/App/System/Applications/Safari.app"

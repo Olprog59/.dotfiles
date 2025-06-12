@@ -6,9 +6,12 @@ return {
     -- add any opts here
     -- for example
     provider = "ollama",
-    ollama = {
-      -- model = "deepseek-r1:32b",
-      model = "qwen3:30b-a3b",
+    providers = {
+      ollama = {
+        endpoint = "http://localhost:11434",
+        -- model = "deepseek-r1:32b",
+        model = "qwen3:30b-a3b",
+      },
     },
     -- openai = {
     --   endpoint = "https://api.openai.com/v1",

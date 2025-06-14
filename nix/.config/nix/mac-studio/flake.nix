@@ -30,6 +30,7 @@
             # Éditeurs et outils d'édition
             neovim
             jdt-language-server
+            emmet-language-server
 
             # Outils système
             mkalias
@@ -165,6 +166,8 @@
             moreutils
 
             alt-tab-macos
+
+            bottom
           ];
 
           homebrew = {

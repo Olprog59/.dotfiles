@@ -14,6 +14,30 @@ return {
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.java" },
+  {
+    "mfussenegger/nvim-jdtls",
+    opts = {
+      settings = {
+        java = {
+          configuration = {
+            runtimes = {
+              {
+                name = "JavaSE-Current",
+                path = "~/.sdkman/candidates/java/current/",
+              },
+            },
+          },
+        },
+        -- format = {
+        --   enabled = true,
+        --   settings = { -- you can use your preferred format style
+        --     url = "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+        --     profile = "GoogleStyle",
+        --   },
+        -- },
+      },
+    },
+  },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.nix" },
@@ -49,6 +73,7 @@ return {
   { import = "astrocommunity.utility.noice-nvim" },
 
   { import = "astrocommunity.icon.mini-icons" },
+  { import = "astrocommunity.split-and-window.neominimap-nvim" },
 
   -- { import = "astrocommunity.workflow.precognition-nvim" },
   -- { import = "astrocommunity.indent.indent-rainbowline" },

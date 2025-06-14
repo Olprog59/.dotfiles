@@ -127,20 +127,20 @@ return {
 
           -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
         },
-        custom_highlights = function(colors)
-          return {
-            -- TabLineSel = { bg = colors.flamingo },
-            -- CmpBorder = { fg = colors.surface2 },
-            -- Pmenu = { bg = colors.none },
-            -- CursorLine = { bg = colors.surface2 },
-            -- LineNr = { fg = colors.overlay2 },
-            -- Comment = { fg = colors.overlay2 },
-            -- SnacksHidden = { fg = colors.overlay2 },
-            -- NeoTreeGitIgnored = { fg = colors.overlay2 },
-            -- NeoTreeDotfile = { fg = colors.overlay2 },
-            -- Visual = { bg = colors.overlay1, fg = colors.mantle },
-          }
-        end,
+        -- custom_highlights = function(colors)
+        --   return {
+        --     -- TabLineSel = { bg = colors.flamingo },
+        --     -- CmpBorder = { fg = colors.surface2 },
+        --     -- Pmenu = { bg = colors.none },
+        --     -- CursorLine = { bg = colors.surface2 },
+        --     -- LineNr = { fg = colors.overlay2 },
+        --     -- Comment = { fg = colors.overlay2 },
+        --     -- SnacksHidden = { fg = colors.overlay2 },
+        --     -- NeoTreeGitIgnored = { fg = colors.overlay2 },
+        --     -- NeoTreeDotfile = { fg = colors.overlay2 },
+        --     -- Visual = { bg = colors.overlay1, fg = colors.mantle },
+        --   }
+        -- end,
         native_lsp = {
           enabled = true,
           virtual_text = {

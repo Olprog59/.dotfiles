@@ -31,6 +31,7 @@
             neovim
             jdt-language-server
             emmet-language-server
+            # code-minimap
 
             # Outils système
             mkalias

@@ -54,8 +54,11 @@ return {
   { import = "astrocommunity.pack.xml" },
   { import = "astrocommunity.pack.yaml" },
 
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.recipes.heirline-vscode-winbar" },
   { import = "astrocommunity.recipes.ai" },
 
+  { import = "astrocommunity.editing-support.bigfile-nvim" },
   { import = "astrocommunity.recipes.vscode-icons" },
 
   { import = "astrocommunity.motion.mini-move" },

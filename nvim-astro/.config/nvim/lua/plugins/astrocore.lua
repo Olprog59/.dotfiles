@@ -65,6 +65,19 @@ return {
         ["<Tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["<S-Tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
+        -- Sous-groupe Dadbod sous <leader>db
+        ["<leader>dd"] = { name = "Dadbod UI" }, -- Groupe which-key
+
+        -- Ouvre/ferme l'interface graphique Dadbod UI
+        ["<leader>ddu"] = { "<cmd>DBUI<CR>", desc = "Ouvrir Dadbod UI" },
+        ["<leader>ddt"] = { "<cmd>DBUIToggle<CR>", desc = "Toggle Dadbod UI" },
+
+        -- Ajouter une connexion à une base de données
+        ["<leader>dda"] = { "<cmd>DBUIAddConnection<CR>", desc = "Ajouter une connexion DB" },
+
+        -- Trouver un buffer Dadbod UI ouvert
+        ["<leader>ddf"] = { "<cmd>DBUIFindBuffer<CR>", desc = "Trouver buffer Dadbod UI" },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
